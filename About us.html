@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About WebCraft | My First Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-deep: #0a0e17;
+            --bg-card: #161b22;
+            --primary: #00d2ff;
+            --secondary: #9d50bb;
+            --accent-green: #00ff88;
+            --text-main: #f0f6fc;
+            --text-dim: #8b949e;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: var(--bg-deep); color: var(--text-main); line-height: 1.8; }
+
+        /* --- HERO SECTION --- */
+        .about-hero {
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: radial-gradient(circle at center, #1a1f2b 0%, var(--bg-deep) 100%);
+            border-bottom: 1px solid #30363d;
+        }
+        .about-hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 800; }
+        .about-hero h1 span { color: var(--primary); }
+        .about-hero p { color: var(--text-dim); letter-spacing: 2px; text-transform: uppercase; font-size: 0.9rem; margin-top: 10px;}
+
+        /* --- WHY WEBCRAFT (PERSONAL NOTE) --- */
+        .section { padding: 80px 10%; }
+        .vision-container {
+            background: var(--bg-card);
+            padding: 50px;
+            border-radius: 20px;
+            border: 1px solid #30363d;
+            position: relative;
+            overflow: hidden;
+        }
+        .vision-container::before {
+            content: '"';
+            position: absolute; top: -20px; left: 20px;
+            font-size: 15rem; color: rgba(255, 255, 255, 0.03); font-family: serif;
+        }
+        .vision-text h2 { font-size: 2rem; margin-bottom: 20px; color: var(--primary); }
+        .vision-text p { font-size: 1.1rem; color: var(--text-dim); margin-bottom: 20px; z-index: 1; position: relative; }
+
+        /* --- CORE VALUES GRID --- */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .value-card {
+            background: #0d1117;
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid #30363d;
+            text-align: center;
+            transition: 0.3s;
+        }
+        .value-card:hover { 
+            border-color: var(--secondary); 
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+        }
+        .value-card i { font-size: 2.5rem; color: var(--accent-green); margin-bottom: 20px; }
+        .value-card h3 { margin-bottom: 15px; }
+        .value-card p { color: var(--text-dim); font-size: 0.95rem; }
+
+        /* --- CALL TO ACTION --- */
+        .cta-box {
+            text-align: center;
+            margin: 80px 10%;
+            padding: 60px;
+            background: linear-gradient(45deg, rgba(0, 210, 255, 0.05), rgba(157, 80, 187, 0.05));
+            border-radius: 20px;
+            border: 1px solid #30363d;
+        }
+        .btn-main {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 35px;
+            background: var(--primary);
+            color: #000;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .btn-main:hover { transform: scale(1.05); filter: brightness(1.1); }
+
+        footer { text-align: center; padding: 40px; color: var(--text-dim); font-size: 0.9rem; border-top: 1px solid #30363d; }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header class="about-hero">
+        <p>A New Beginning</p>
+        <h1>About <span>WebCraft.</span></h1>
+    </header>
+
+    <div class="section">
+        <!-- Personal Note / Vision -->
+        <div class="vision-container">
+            <div class="vision-text">
+                <h2>Why I Created This</h2>
+                <p>WebCraft is more than just a website; it’s my first step into the world of Full-Stack Development. I built this platform to document my learning and to provide a clean, modern hub where other aspiring developers can find structured resources.</p>
+                <p>As a developer starting my own journey, I realized how overwhelming code can be. That's why I focused on creating a UI that is easy on the eyes and a structure that makes sense to the human brain, not just the computer.</p>
+            </div>
+        </div>
+
+        <!-- Core Values -->
+        <div class="values-grid">
+            <div class="value-card">
+                <i class="fas fa-lightbulb"></i>
+                <h3>Clarity First</h3>
+                <p>No more confusing tutorials. We break down complex HTML, CSS, and SQL into small, digestible pieces.</p>
+            </div>
+            <div class="value-card">
+                <i class="fas fa-rocket"></i>
+                <h3>Modern Stack</h3>
+                <p>Focused on the latest technologies and design trends like Glassmorphism and Responsive Layouts.</p>
+            </div>
+            <div class="value-card">
+                <i class="fas fa-heart"></i>
+                <h3>Built with Passion</h3>
+                <p>Every line of code in this project was written with a focus on learning and sharing knowledge.</p>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-box">
+            <h2>Want to see what I'm building next?</h2>
+            <p>Join me as I explore advanced JavaScript and Backend architectures.</p>
+            <a href="Tutorials.html" class="btn-main">EXPLORE TUTORIALS</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 WebCraft. Created with ❤️ as my First Web Project.</p>
+    </footer>
+
+</body>
+</html>
